@@ -1,0 +1,9 @@
+def alphabet_position(text):
+        alphabet = []
+        for letter in range(97,123):
+            alphabet.append(chr(letter))
+        result=""
+        for i in list(''.join(text.split())):
+            if i.lower() in alphabet:
+                result += str(alphabet.index(i.lower())+1) + " "
+        return result.strip()
